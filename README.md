@@ -28,4 +28,5 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \stronglab\alert\FlashMessage::widget(); ?>```
+<?= \stronglab\alert\FlashMessage::widget(); ?>
+```

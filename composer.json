@@ -1,21 +1,25 @@
 {
-    "name": "stronglab/yii2-alert",
-    "description": "Yii2 Alert Message",
-    "type": "yii2-extension",
-    "keywords": ["yii2","extension"],
-    "license": "BSD-3-Clause",
-    "authors": [
-        {
-            "name": "strong",
-            "email": "strong.barnaul@gmail.com"
-        }
-    ],
-    "require": {
-        "yiisoft/yii2": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "stronglab\\alert\\": ""
-        }
+  "name": "stronglab/yii2-alert",
+  "description": "Yii2 Alert Message",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "extension"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "strong",
+      "email": "strong.barnaul@gmail.com"
     }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "yiisoft/yii2-bootstrap": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "stronglab\\alert\\": ""
+    }
+  }
 }
