@@ -1,6 +1,6 @@
-Yii2 Alert Message
-==================
-Yii2 Alert Message
+Yii2 Alert Flash Messages
+=========================
+Alert popup flash messages without bootstrap
 
 Installation
 ------------
