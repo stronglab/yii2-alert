@@ -1,3 +1,5 @@
+var timerId;
+
 $(document).on("contextmenu", ".flash-modal", function (e) {
     e.preventDefault();
     $(this).fadeOut(420);
@@ -6,7 +8,7 @@ $(document).on("contextmenu", ".flash-modal", function (e) {
 function showMessage(message, type, fade) {
     fade = typeof fade !== "undefined" ? fade : 1;
     type = typeof type !== "undefined" ? type : "flash-alert-info";
-    var top = 20 + $(".flash-modal").length * 100;
+    var top = 20 + $(".flash-modal:visible").length * 100;
     var style = "top: " + top + "px";
     var obj = $('<div>', {
         'class': 'flash-modal',
@@ -21,6 +23,7 @@ function showMessage(message, type, fade) {
         messageBoxFadeOut(obj);
         obj.mouseover(
             function () {
+                clearTimeout(timerId);
                 if ($(this).is(":animated")) {
                     $(this).stop().animate({opacity: "100"});
                 }
@@ -34,7 +37,9 @@ function showMessage(message, type, fade) {
 }
 
 function messageBoxFadeOut(obj) {
-    obj.fadeOut(7000, function () {
-        obj.removeClass("alert-danger alert-success alert-info");
-    });
+    timerId = setTimeout(function () {
+        obj.fadeOut(300, function () {
+            obj.removeClass("alert-danger alert-success alert-info");
+        });
+    }, 2000);
 }
