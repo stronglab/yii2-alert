@@ -6,15 +6,14 @@ $(document).on("contextmenu", ".flash-modal", function (e) {
 function showMessage(message, type, fade) {
     fade = typeof fade !== "undefined" ? fade : 1;
     type = typeof type !== "undefined" ? type : "flash-alert-info";
-    var style;
     var top = 20 + $(".flash-modal").length * 100;
-    style = "top: " + top + "px";
+    var style = "top: " + top + "px";
     var obj = $('<div>', {
         'class': 'flash-modal',
         'style': style
     });
     obj.appendTo('body');
-    obj.html("<b>" + message + "</b>");
+    obj.text(message);
     obj.addClass(type);
     obj.stop().animate({opacity: "100"});
     obj.show();
