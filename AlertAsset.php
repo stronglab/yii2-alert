@@ -18,4 +18,8 @@ class AlertAsset extends AssetBundle
     public $js = [
         'alert.js',
     ];
+
+    public $depends = [
+        'yii\web\JqueryAsset',
+    ];
 }
