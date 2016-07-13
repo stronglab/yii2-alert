@@ -39,7 +39,7 @@ function showMessage(message, type, fade) {
 function messageBoxFadeOut(obj) {
     timerId = setTimeout(function () {
         obj.fadeOut(300, function () {
-            obj.removeClass("alert-danger alert-success alert-info");
+            obj.remove();
         });
     }, 2000);
 }
